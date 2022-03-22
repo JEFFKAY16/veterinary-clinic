@@ -11,11 +11,6 @@ psql vet_clinic;
 /* Created table */
 
 CREATE TABLE animals (
-    name varchar(100)
-);
-
-
-CREATE TABLE animals (
   id INT PRIMARY KEY NOT NULL,
   name varchar(100) NOT NULL,
   date_of_birth DATE NOT NULL,
