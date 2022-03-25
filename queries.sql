@@ -84,4 +84,6 @@ SELECT name, MAX(escape_attempts) as max FROM animals GROUP BY neutered, name OR
 -- What is the minimum and maximum weight of each type of animal?
 SELECT species, MAX(weight_kg) as max_weigth, MIN(weight_kg) AS min_weight FROM animals GROUP by species;
 
-SELECT species, AVG(escape_attempts) AS avg_escapes  FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-01-01' GROUP BY species;
+SELECT species, AVG(escape_attempts) FROM animals
+GROUP BY species
+WHERE  date_of_birth >= '1990/01/01' AND date_of_birth <= '2000/31/12';
