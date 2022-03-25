@@ -1,3 +1,7 @@
+/*Queries that provide answers to the questions from all projects.
+ COMMENTS ARE RESULTS RUN on data inserted form schema only.
+*/
+
 SELECT * FROM animals WHERE name LIKE '%mon';
 
 SELECT name FROM animals WHERE CAST(to_char(date_of_birth, 'YYYY') AS INTEGER) BETWEEN 2016 AND 2019;
@@ -18,6 +22,7 @@ SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
 BEGIN;
 
 UPDATE animals SET species =' unspecified';
+
 
 SELECT * FROM animals;
 
